@@ -139,11 +139,12 @@ filename and function name are the same, the arguments to the function are the
 same, the optional version is the same, and all of the file system operations
 have the same results.
 
-In addition, to save time, `FileBuilder` doesn't delete any of the files written
-during the previous build unless it has to overwrite them. The results of
-FileBuilder's file system methods, such as `is_file` and `list_dir`, depend on
-the virtual state of the file system maintained by `FileBuilder`, not simply on
-the real state of the file system.
+In addition, to save time, `FileBuilder` doesn't initially delete any of the
+files written during the previous build. It's possible that many of these files
+won't need to be touched at all, because their cache entries are still valid.
+For this and other reasons, the results of `FileBuilder`'s file system methods,
+such as `is_file` and `list_dir`, depend on the virtual state of the file system
+maintained by `FileBuilder`, not simply on the real state of the file system.
 
 `FileBuilder` does its best to deal with concurrent external changes to files
 and directories, but it makes no guarantees.
