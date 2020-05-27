@@ -42,8 +42,8 @@ benefits.
   changed since the last build. (Ugly workarounds are possible.)
 * Batching is not supported. To use the lint example, it could be that it is
   faster to lint a group of files all at once by passing all of their filenames
-  to the linter, compared to linting them one at a time. This is not possible
-  with `FileBuilder`, except by using clunky workarounds.
+  to the linter, compared to linting them one at a time. Normally, it's not
+  possible to take advantage of batching, except by using clunky workarounds.
 * `FileBuilder` does not allow for the direct manipulation of any output files
   from the last build. If an output file needs to be changed, then we have to
   regenerate that file from scratch.
