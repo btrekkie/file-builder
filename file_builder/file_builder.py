@@ -289,7 +289,7 @@ class FileBuilder:
           build, and restore all of the files and directories written
           during the previous build (even if they had changed) and the
           old contents of ``cache_filename``. Also, restore the old
-          contents of any files that ``build_file*` overwrote.
+          contents of any files that ``build_file*`` overwrote.
 
         However, ``build_versioned`` doesn't literally follow the above
         steps. Instead, it uses cached results from the previous build
