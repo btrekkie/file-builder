@@ -533,9 +533,9 @@ class FileBuilder:
         arguments passed to ``func`` are copies of ``args`` and
         ``kwargs``, rather than direct references. In such cases, we can
         smuggle in the arguments either by binding them using
-        ``functools.partial``, or by making them fields of the some
-        object (e.g. ``self._my_executor``) and passing in one of the
-        object's methods for ``func`` (e.g. ``self._my_build_file``).
+        ``functools.partial``, or by making them fields of some object
+        (e.g. ``self._my_executor``) and passing in one of the object's
+        methods for ``func`` (e.g. ``self._my_build_file``).
 
         Arguments:
             filename (pathlike): The file we are writing. This must be a
